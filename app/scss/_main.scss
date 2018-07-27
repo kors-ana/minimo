@@ -1,0 +1,130 @@
+%hint {
+    font: {
+        family: Ubuntu;
+        weight: 300;
+        size: 1.4rem;
+    }
+    text-transform: uppercase;
+    color: #b4ad9e;
+}
+
+%container {
+    margin: {
+        left: 150px;
+        right: 150px;
+    }
+}
+
+%title {
+    font-size: 3rem;
+}
+
+%description {
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+}
+
+.first-post {
+    margin-bottom: 120px;
+    &__photo {
+        margin: 85px 70px;
+    }
+    &__hint {
+        @extend %hint;
+        @extend %container;
+        margin: {
+            top: 15px;
+            bottom: 15px;
+        }
+    }
+    &__title {
+        @extend %title;
+        @extend %container;
+        margin: {
+            top: 15px;
+            bottom: 15px;
+        }
+    }
+    &__description {
+        @extend %description;
+        @extend %container;
+        margin: {
+            top: 15px;
+            bottom: 15px;
+        }
+    }
+}
+
+.photography__posts {
+    @include row_grid(30px);
+}
+
+.post {
+    @include col_grid(6, 30px);
+    &__image {
+        margin: {
+            top: 15px;
+            bottom: 15px;
+        }
+    }
+    &__hint {
+        margin: {
+            top: 15px;
+            bottom: 15px;
+        }
+    }
+    &__title {
+        margin: {
+            top: 15px;
+            bottom: 15px;
+        }
+    }
+    &__description {
+        margin: {
+            top: 25px;
+            bottom: 120px;
+        }
+    }
+}
+
+.form {
+//    @extend %container;
+    margin: 25px auto;
+    background-color: #f0f0f0;
+    &__title {
+        @extend %title;
+        color: #333333;
+        padding: {
+            top: 75px;
+            bottom: 40px;
+        }
+    }
+    &__email {
+        padding: {
+            top: 40px;
+            bottom: 75px;
+        }
+        border-bottom: 1px solid #333333;
+        &::placeholder {
+            color: #626262;
+        }
+    }
+    &__button {
+        position: relative;
+        left: 150px;
+    }
+}
+
+.photodiary__button {
+    font-size: 2rem;
+    line-height: 2.4rem;
+    padding: 21px 34px;
+    border: 1px solid #626262;
+    margin: {
+        top: 45px;
+        bottom: 45px;
+    }
+}
+
+
+

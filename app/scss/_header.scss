@@ -1,0 +1,22 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    margin: 70px;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    &__item {
+        font-family: Playfair_Display;
+        font-size: 1.4rem;
+        line-height: 2.4rem;
+        text-transform: uppercase;
+        color: #626262;
+        &:hover {
+            color: #f0f0f0;
+            display: inline-block;
+            border-bottom: 1px solid #f0f0f0;
+        }
+    }
+}

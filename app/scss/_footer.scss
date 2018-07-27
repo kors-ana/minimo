@@ -1,0 +1,21 @@
+%text {
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+    color: #000;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+    background-color: #f0f0f0;
+    &__conditions {
+        @extend %text;
+    }
+}
+
+.social {
+    &__follow {
+        @extend %text;
+    }
+}

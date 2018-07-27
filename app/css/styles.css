@@ -1,0 +1,197 @@
+@font-face {
+  font-family: 'Playfair_Display';
+  src: url("../fonts/Playfair_Display/PlayfairDisplay-Regular.ttf");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Ubuntu';
+  src: url("../fonts/Ubuntu/PUbuntu-Light.ttf");
+  font-weight: 300;
+  font-style: normal; }
+
+* {
+  outline: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+ul, li, body {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+a {
+  text-decoration: none; }
+
+html {
+  font-size: 10px; }
+
+body {
+  background-color: #fff;
+  margin: 0 auto;
+  font-family: Playfair_Display;
+  color: #626262; }
+
+.header {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 70px; }
+
+.menu {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+
+.menu__item {
+  font-family: Playfair_Display;
+  font-size: 1.4rem;
+  line-height: 2.4rem;
+  text-transform: uppercase;
+  color: #626262; }
+
+.menu__item:hover {
+  color: #f0f0f0;
+  display: inline-block;
+  border-bottom: 1px solid #f0f0f0; }
+
+.first-post__hint {
+  font-family: Ubuntu;
+  font-weight: 300;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  color: #b4ad9e; }
+
+.first-post__hint, .first-post__title, .first-post__description {
+  margin-left: 150px;
+  margin-right: 150px; }
+
+.first-post__title, .form__title {
+  font-size: 3rem; }
+
+.first-post__description {
+  font-size: 1.4rem;
+  line-height: 2.4rem; }
+
+.first-post {
+  margin-bottom: 120px; }
+
+.first-post__photo {
+  margin: 85px 70px; }
+
+.first-post__hint {
+  margin-top: 15px;
+  margin-bottom: 15px; }
+
+.first-post__title {
+  margin-top: 15px;
+  margin-bottom: 15px; }
+
+.first-post__description {
+  margin-top: 15px;
+  margin-bottom: 15px; }
+
+.photography__posts {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-left: -30px;
+  margin-right: -30px; }
+
+.post {
+  width: -webkit-calc(100% / 12 * 6 - 30px * 2);
+  width: calc(100% / 12 * 6 - 30px * 2);
+  margin-left: 30px;
+  margin-right: 30px; }
+
+.post__image {
+  margin-top: 15px;
+  margin-bottom: 15px; }
+
+.post__hint {
+  margin-top: 15px;
+  margin-bottom: 15px; }
+
+.post__title {
+  margin-top: 15px;
+  margin-bottom: 15px; }
+
+.post__description {
+  margin-top: 25px;
+  margin-bottom: 120px; }
+
+.form {
+  margin: 25px auto;
+  background-color: #f0f0f0; }
+
+.form__title {
+  color: #333333;
+  padding-top: 75px;
+  padding-bottom: 40px; }
+
+.form__email {
+  padding-top: 40px;
+  padding-bottom: 75px;
+  border-bottom: 1px solid #333333; }
+
+.form__email::-webkit-input-placeholder {
+  color: #626262; }
+
+.form__email::-moz-placeholder {
+  color: #626262; }
+
+.form__email:-ms-input-placeholder {
+  color: #626262; }
+
+.form__email::-ms-input-placeholder {
+  color: #626262; }
+
+.form__email::placeholder {
+  color: #626262; }
+
+.form__button {
+  position: relative;
+  left: 150px; }
+
+.photodiary__button {
+  font-size: 2rem;
+  line-height: 2.4rem;
+  padding: 21px 34px;
+  border: 1px solid #626262;
+  margin-top: 45px;
+  margin-bottom: 45px; }
+
+.footer__conditions, .social__follow {
+  font-size: 1.4rem;
+  line-height: 2.4rem;
+  color: #000; }
+
+.footer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 40px;
+  background-color: #f0f0f0; }
