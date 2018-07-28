@@ -6,7 +6,7 @@
 
 @font-face {
   font-family: 'Ubuntu';
-  src: url("../fonts/Ubuntu/PUbuntu-Light.ttf");
+  src: url("../fonts/Ubuntu/Ubuntu-Light.ttf");
   font-weight: 300;
   font-style: normal; }
 
@@ -51,57 +51,65 @@ body {
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
-          justify-content: space-between; }
+          justify-content: space-between;
+  width: 56%; }
 
-.menu__item {
+.menu__ref {
   font-family: Playfair_Display;
   font-size: 1.4rem;
   line-height: 2.4rem;
   text-transform: uppercase;
   color: #626262; }
 
-.menu__item:hover {
-  color: #f0f0f0;
+.menu__ref:hover {
+  color: #141414;
   display: inline-block;
-  border-bottom: 1px solid #f0f0f0; }
+  border-bottom: 1px solid #141414; }
 
-.first-post__hint {
+.first-post__hint, .post__hint {
   font-family: Ubuntu;
   font-weight: 300;
   font-size: 1.4rem;
   text-transform: uppercase;
-  color: #b4ad9e; }
+  color: #b4ad9e;
+  display: inline-block; }
 
-.first-post__hint, .first-post__title, .first-post__description {
+.first-post__hint, .first-post__title, .first-post__description, .photodiary__container {
   margin-left: 150px;
   margin-right: 150px; }
 
-.first-post__title, .form__title {
-  font-size: 3rem; }
+.first-post__title, .post__title, .form__title {
+  font-size: 3rem;
+  font-weight: 400; }
 
-.first-post__description {
+.first-post__description, .post__description, .form__email {
+  font-family: Playfair_Display;
   font-size: 1.4rem;
   line-height: 2.4rem; }
 
 .first-post {
-  margin-bottom: 120px; }
+  margin-bottom: 100px; }
 
 .first-post__photo {
-  margin: 85px 70px; }
+  margin: 0px 70px 80px; }
 
 .first-post__hint {
   margin-top: 15px;
   margin-bottom: 15px; }
+
+.first-post__hint:last-child {
+  margin-top: 25px;
+  margin-bottom: 25px; }
 
 .first-post__title {
   margin-top: 15px;
   margin-bottom: 15px; }
 
 .first-post__description {
-  margin-top: 15px;
-  margin-bottom: 15px; }
+  margin-top: 25px;
+  margin-bottom: 25px; }
 
-.photography__posts {
+.photodiary__posts {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -139,17 +147,37 @@ body {
   margin-bottom: 120px; }
 
 .form {
-  margin: 25px auto;
-  background-color: #f0f0f0; }
+  padding-top: 65px;
+  padding-bottom: 65px;
+  background-color: #f0f0f0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center; }
 
 .form__title {
   color: #333333;
-  padding-top: 75px;
-  padding-bottom: 40px; }
+  margin: 0 0 40px 0; }
 
 .form__email {
-  padding-top: 40px;
-  padding-bottom: 75px;
+  margin-top: 40px;
+  padding-bottom: 10px;
+  width: 400px;
+  border: none;
+  background-color: transparent;
   border-bottom: 1px solid #333333; }
 
 .form__email::-webkit-input-placeholder {
@@ -169,7 +197,11 @@ body {
 
 .form__button {
   position: relative;
-  left: 150px; }
+  left: 175px;
+  bottom: 30px;
+  border: none;
+  background: none;
+  cursor: pointer; }
 
 .photodiary__button {
   font-size: 2rem;

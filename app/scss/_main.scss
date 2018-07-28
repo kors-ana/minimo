@@ -6,6 +6,7 @@
     }
     text-transform: uppercase;
     color: #b4ad9e;
+    display: inline-block;
 }
 
 %container {
@@ -16,18 +17,24 @@
 }
 
 %title {
-    font-size: 3rem;
+    font: {
+        size: 3rem;
+        weight: 400;
+    }
 }
 
 %description {
-    font-size: 1.4rem;
+    font: {
+        family: Playfair_Display;
+        size: 1.4rem;
+    }
     line-height: 2.4rem;
 }
 
 .first-post {
-    margin-bottom: 120px;
+    margin-bottom: 100px;
     &__photo {
-        margin: 85px 70px;
+        margin: 0px 70px 80px;
     }
     &__hint {
         @extend %hint;
@@ -35,6 +42,12 @@
         margin: {
             top: 15px;
             bottom: 15px;
+        }
+        &:last-child {
+            margin: {
+                top: 25px;
+                bottom: 25px;
+            }
         }
     }
     &__title {
@@ -49,14 +62,19 @@
         @extend %description;
         @extend %container;
         margin: {
-            top: 15px;
-            bottom: 15px;
+            top: 25px;
+            bottom: 25px;
         }
     }
 }
 
-.photography__posts {
-    @include row_grid(30px);
+.photodiary {
+    &__container {
+        @extend %container;
+    }
+    &__posts {
+        @include row_grid(30px);
+    }
 }
 
 .post {
@@ -68,18 +86,21 @@
         }
     }
     &__hint {
+        @extend %hint;
         margin: {
             top: 15px;
             bottom: 15px;
         }
     }
     &__title {
+        @extend %title;
         margin: {
             top: 15px;
             bottom: 15px;
         }
     }
     &__description {
+        @extend %description;
         margin: {
             top: 25px;
             bottom: 120px;
@@ -88,22 +109,27 @@
 }
 
 .form {
-//    @extend %container;
-    margin: 25px auto;
+    padding: {
+        top: 65px;
+        bottom: 65px;
+    }
     background-color: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
     &__title {
         @extend %title;
         color: #333333;
-        padding: {
-            top: 75px;
-            bottom: 40px;
-        }
+        margin: 0 0 40px 0;;
     }
     &__email {
-        padding: {
-            top: 40px;
-            bottom: 75px;
-        }
+        margin-top: 40px;
+        padding-bottom: 10px;
+        width: 400px;
+        border: none;
+        background-color: transparent;
+        @extend %description;
         border-bottom: 1px solid #333333;
         &::placeholder {
             color: #626262;
@@ -111,7 +137,11 @@
     }
     &__button {
         position: relative;
-        left: 150px;
+        left: 175px;
+        bottom: 30px;
+        border: none;
+        background: none;
+        cursor: pointer;
     }
 }
 
