@@ -1,21 +1,54 @@
 %text {
     font-size: 1.4rem;
     line-height: 2.4rem;
-    color: #000;
+    color: #000000;
 }
 
 .footer {
-    display: flex;
-    justify-content: space-between;
-    padding: 40px;
+    padding: {
+        top: 40px;
+        bottom: 40px;
+    }
     background-color: #f0f0f0;
-    &__conditions {
+    &__container {
+        @extend %container;
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.copyright {
+    &__item {
         @extend %text;
+        margin: {
+            left: 10px;
+            right: 10px;
+        }
+        &:first-child {
+            margin-left: -10px;
+        }
     }
 }
 
 .social {
+    display: flex;
     &__follow {
         @extend %text;
+        margin-right: 20px;
+    }
+    &__container {
+        display: flex;
+    }
+    &__ref {
+        padding: 0 10px 0;
+    }
+    &__icon {
+        width: 20px;
+        height: 20px;
+        fill: #6a6969;
+        &:hover {
+            fill: #343434;
+            transform: scale(1.2);
+        }
     }
 }
