@@ -1,5 +1,8 @@
 html {
     font-size: 10px;
+    @include media(800px) {
+        font-size: 11px;
+    }
 }
 
 body {

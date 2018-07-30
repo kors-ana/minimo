@@ -11,8 +11,14 @@
 
 %container {
     margin: {
-        left: 150px;
-        right: 150px;
+        left: 15rem;
+        right: 15rem;
+    }
+    @include media(1160px) {
+        margin: {
+            left: 5rem;
+            right: 5rem;
+        }
     }
 }
 
@@ -34,19 +40,27 @@
 .first-post {
     margin-bottom: 100px;
     &__photo {
-        margin: 0px 65px 80px;
+        display: block;
+        margin: 0 auto 8rem;
+        width: 90%;
     }
     &__hint {
         @extend %hint;
         @extend %container;
         margin: {
-            top: 15px;
-            bottom: 15px;
+            top: 1.5rem;
+            bottom: 1.5rem;
+        }
+        @include media(768px) {
+            margin: {
+                top: 0.75rem;
+                bottom: 0.75rem;
+            }
         }
         &:last-child {
             margin: {
-                top: 25px;
-                bottom: 25px;
+                top: 2.5rem;
+                bottom: 2.5rem;
             }
         }
     }
@@ -54,16 +68,28 @@
         @extend %title;
         @extend %container;
         margin: {
-            top: 15px;
-            bottom: 15px;
+            top: 1.5rem;
+            bottom: 1.5rem;
+        }
+        @include media(768px) {
+          margin: {
+            top: 0.75rem;
+            bottom: 0.75rem;
+          }
         }
     }
     &__description {
         @extend %description;
         @extend %container;
         margin: {
-            top: 25px;
-            bottom: 25px;
+            top: 2.5rem;
+            bottom: 2.5rem;
+        }
+        @include media(768px) {
+          margin: {
+            top: 1rem;
+            bottom: 1rem;
+          }
         }
     }
 }
@@ -73,7 +99,10 @@
         @extend %container;
     }
     &__posts {
-        @include row_grid(30px);
+        @include row_grid(3rem);
+        @include media(650px) {
+            @include row_grid(1rem);
+        }
     }
     &__button {
       display: block;
@@ -82,82 +111,123 @@
         size: 2rem;
       }
       line-height: 2.4rem;
-      padding: 20px 35px;
-      margin: 45px auto;
+      padding: 2rem 3.5rem;
+      margin: 4.5rem auto;
       border: 1px solid #626262;
       background: transparent;
       cursor: pointer;
+      @include media(768px) {
+          padding: 1rem 1.5rem;
+          margin: 2.5rem auto;
+      }
     }
 }
 
 .post {
-    @include col_grid(5.5, 30px);
+    @include col_grid(5.5, 3rem);
+    @include media(650px) {
+        @include col_grid(12, 1rem);
+    }
     &__image {
+      width: 100%;
+      margin: {
+        top: 1.5rem;
+        bottom: 1.5rem;
+      }
+      @include media(768px) {
         margin: {
-            top: 15px;
-            bottom: 15px;
+          top: 1rem;
+          bottom: 1rem;
         }
+      }
     }
     &__hint {
         @extend %hint;
         margin: {
-            top: 15px;
-            bottom: 15px;
+            top: 1.5rem;
+            bottom: 1.5rem;
+        }
+        @include media(768px) {
+          margin: {
+            top: 1rem;
+            bottom: 1rem;
+          }
         }
     }
     &__title {
         @extend %title;
         margin: {
-            top: 15px;
-            bottom: 15px;
+            top: 1.5rem;
+            bottom: 1.5rem;
+        }
+        @include media(768px) {
+          margin: {
+            top: 1rem;
+            bottom: 1rem;
+          }
         }
     }
     &__description {
         @extend %description;
         margin: {
-            top: 25px;
-            bottom: 120px;
+            top: 2.5rem;
+            bottom: 12rem;
+        }
+        @include media(768px) {
+          margin: {
+            top: 1rem;
+            bottom: 6rem;
+          }
         }
     }
 }
 
 .form {
+  padding: {
+    top: 6.5rem;
+    bottom: 6.5rem;
+  }
+  @include media(768px) {
     padding: {
-        top: 65px;
-        bottom: 65px;
+      top: 3rem;
+      bottom: 3rem;
     }
-    margin-bottom: 70px;
-    background-color: #f0f0f0;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    &__title {
-        @extend %title;
-        color: #333333;
-        margin: 0 0 40px 0;;
+  }
+  margin-bottom: 7rem;
+  background-color: #f0f0f0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  &__title {
+    @extend %title;
+    color: #333333;
+    margin-bottom: 4rem;
+  }
+  &__email {
+    margin-top: 4rem;
+    padding-bottom: 1rem;
+    width: 400px;
+    border: none;
+    background-color: transparent;
+    @extend %description;
+    border-bottom: 1px solid #333333;
+    &::placeholder {
+      color: #626262;
     }
-    &__email {
-        margin-top: 40px;
-        padding-bottom: 10px;
-        width: 400px;
-        border: none;
-        background-color: transparent;
-        @extend %description;
-        border-bottom: 1px solid #333333;
-        &::placeholder {
-            color: #626262;
-        }
-    }
-    &__button {
-        position: relative;
-        left: 175px;
-        bottom: 30px;
-        border: none;
-        background: none;
-        cursor: pointer;
-    }
+  }
+  &__button {
+    position: relative;
+    left: 175px;
+    bottom: 30px;
+    border: none;
+    background: none;
+    cursor: pointer;
+  }
 }
+
+
+
 
 
 

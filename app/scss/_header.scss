@@ -1,7 +1,14 @@
 .header {
     display: flex;
     justify-content: space-between;
-    margin: 70px;
+    margin: 7rem;
+}
+
+.logo__image {
+    width: 100%;
+    @include media(690px) {
+        width: 70%;
+    }
 }
 
 .menu {
@@ -19,5 +26,8 @@
             display: inline-block;
             border-bottom: 1px solid #141414;
         }
+    }
+    @include media(690px) {
+        width: 70%;
     }
 }
