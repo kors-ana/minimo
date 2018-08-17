@@ -3,6 +3,9 @@ html {
     @include media(800px) {
         font-size: 11px;
     }
+    @include media(440px) {
+        font-size: 10px;
+    }
 }
 
 body {
