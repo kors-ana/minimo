@@ -49,7 +49,7 @@ body {
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin: 7rem; }
+  margin: 7rem 10rem; }
 
 @media only screen and (max-width: 670px) {
   .header {
@@ -180,8 +180,7 @@ nav {
 
 .first-post__hint, .first-post__title, .first-post__description, .photodiary__container, .footer__container {
   max-width: 1350px;
-  margin-left: 15rem;
-  margin-right: 15rem; }
+  margin: 0 auto; }
 
 @media only screen and (max-width: 1160px) {
   .first-post__hint, .first-post__title, .first-post__description, .photodiary__container, .footer__container {
@@ -211,6 +210,7 @@ nav {
   width: 90%; }
 
 .first-post__hint {
+  display: block;
   margin-top: 1.5rem;
   margin-bottom: 1.5rem; }
 

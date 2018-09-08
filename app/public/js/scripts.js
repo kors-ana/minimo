@@ -1,6 +1,9 @@
 document.addEventListener('DOMContentLoaded', function() {
-    var menu = new Menu('menu__button-hidden', 'menu',  'menu__button_press_pressed', 'menu__list_visibility_visible');
-});
+    var menu = new Menu('menu__button', 'menu__list', 'menu__button_press_pressed', 'menu__list_visibility_visible');
+})
+
+
+
 function Menu(menuBtnClass, menuListClass,  menuBtnPressClass, menuListVisibilityClass) {
     var menuButton = document.getElementsByClassName(menuBtnClass)[0],
         menuList = document.getElementsByClassName(menuListClass)[0];
